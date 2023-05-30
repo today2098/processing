@@ -51,4 +51,8 @@ void draw(){
             ellipse(x_head-26,height/2+36+diff,20,20);
         }
     }
+
+    if(frameCount<=300){
+        saveFrame("frames/frame-####.tif");
+    }
 }
