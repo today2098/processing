@@ -12,14 +12,14 @@ void draw(){
     int x_head=2*H, x_tail=14*H;
     int num=(x_tail-x_head)/(H/2)+1;  // 胴の数．
 
-    float arg2=(float)frameCount/10;
+    float arg2=(float)frameCount/4;
     float diff2=10*sin(arg2);  // 毛について．
 
     for(int x=x_tail;x>=x_head;x-=H/2){
         int idx=x/(H/2)-x_head/(H/2);
 
-        float arg=(float)frameCount/30+(float)(num-idx)/3;
-        float diff=10*sin(arg);  // 胴について．
+        float arg=(float)frameCount/12-(float)idx/2;
+        float diff=15*sin(arg);  // 胴について．
 
         // 毛虫の胴体．
         noStroke();
@@ -52,7 +52,7 @@ void draw(){
         }
     }
 
-    if(frameCount<=300){
+    if(frameCount<=600){
         saveFrame("frames/frame-####.tif");
     }
 }
