@@ -10,7 +10,6 @@ void draw(){
     int H=W/2;  // 毛虫の胴の縦幅．100.
 
     int x_head=2*H, x_tail=14*H;
-    int num=(x_tail-x_head)/(H/2)+1;  // 胴の数．
 
     float arg2=(float)frameCount/4;
     float diff2=10*sin(arg2);  // 毛について．
